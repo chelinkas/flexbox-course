@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b1c400e4b6.js" crossorigin="anonymous"></script>
+    
+    <style>
+        body{
+            margin: 0px;
+        }
+
+        .navbar{
+            background: #415068;
+        }
+
+        .navbar div{
+            display: none;
+        }
+
+        .navbar .togggle,
+        .navbar .brand {
+            display: inline-block;
+        }
+
+        .navbar .link{
+            display: block;
+            text-align: center;
+            padding: 1em;
+            text-decoration: none;
+            background:#223047 ;
+            color: white;
+        }
+
+        .navbar .link:hover,
+        .navbar .link:active{
+            color: #223047;
+            background: white;
+        }
+
+        .navbar .brand{
+            width: 10em;
+            text-align: center;
+            padding: 1em;
+            color: white;
+        }
+
+        .navbar a{
+            text-decoration: none;
+        }
+
+        .navbar .toggle {
+            padding: 1em;
+            color: black;
+        }
+
+        @media (min-width:48em){
+            .navbar {
+                display: flex;
+            }
+
+            .navbar div {
+                display: flex;
+            }
+
+            .navbar .left,
+            .navbar .right {
+                display: flex;
+                flex: 1;
+            }
+
+            .navbar link{
+                width: auto;
+            }
+            .navbar .right{
+                justify-content: flex-end;
+            }
+            
+            .navbar .toggle {
+                display: none;
+            }
+        }
+
+        @media (max-width: 48em) {
+            .navbar .active .toggle{
+                background: #223047;
+                color: white;
+            }
+
+            .navbar .brand {
+                text-align: left;
+            }
+
+            .navbar .active .div {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="" class="toggle" id="navHamburger">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <a href="#" class="brand">Myname</a>
+
+        <div class="left">
+            <a href="#" class="link">link 1</a>
+            <a href="#" class="link">Link 2</a>
+        </div>
+
+        <div class="right">
+            <a href="#" class="link">Link 3</a>
+        </div>
+    </div>
+</body>
+
+<script>
+    const navHamburger = document.querySelector('#navHamburger')
+</script>
+
+</html>
